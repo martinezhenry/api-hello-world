@@ -1,0 +1,8 @@
+
+
+server:
+  ## Server Port
+  port: 8081
+
+## Api Version
+version: 1.0
