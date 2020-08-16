@@ -4,6 +4,7 @@ import com.devteampower.api.helloworld.controller.HelloController;
 import com.devteampower.api.helloworld.service.HelloService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
 
 import java.util.Optional;
 
@@ -19,7 +20,7 @@ public class HelloControllerImpl implements HelloController {
 
     @Override
     @GetMapping(value = {"/hello", "/hello/{somebody}"}, produces = MediaType.TEXT_PLAIN_VALUE)
-    public String sayHello(@PathVariable Optional<String> somebody) {
-        return helloService.sayHello(somebody);
+    public Mono<String> sayHello(@PathVariable Optional<String> somebody) {
+        return Mono.just(helloService.sayHello(somebody));
     }
 }

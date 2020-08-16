@@ -1,9 +1,11 @@
 package com.devteampower.api.helloworld.controller;
 
+import reactor.core.publisher.Mono;
+
 import java.util.Optional;
 
 public interface HelloController {
 
-    String sayHello(Optional<String> somebody);
+    Mono<String> sayHello(Optional<String> somebody);
 
 }
