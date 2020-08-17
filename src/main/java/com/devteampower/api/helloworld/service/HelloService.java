@@ -7,6 +7,6 @@ public interface HelloService {
     String TEMPLATE = "Hello, %s";
     String DEFAULT_NAME = "Somebody";
 
-    String sayHello(Optional<String> somebody);
+    String sayHello(Optional<String> username);
 
 }

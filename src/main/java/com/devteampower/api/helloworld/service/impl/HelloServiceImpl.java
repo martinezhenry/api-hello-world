@@ -9,8 +9,8 @@ import java.util.Optional;
 public class HelloServiceImpl implements HelloService {
 
     @Override
-    public String sayHello(Optional<String> name) {
-        String response = String.format(TEMPLATE, name.orElse(DEFAULT_NAME));
+    public String sayHello(Optional<String> username) {
+        String response = String.format(TEMPLATE, username.orElse(DEFAULT_NAME));
         return response;
     }
 }
